@@ -62,7 +62,6 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="dividePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFO-xa-aeF"/>
                                                     <action selector="plusNegativePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zc-dO-IOx"/>
                                                 </connections>
                                             </button>
@@ -387,7 +386,6 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="dot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bb8-BA-QgD"/>
                                                     <action selector="dotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBx-As-XLM"/>
                                                 </connections>
                                             </button>
@@ -441,8 +439,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="numberPressed" destination="eDZ-a8-r5r" id="gaE-ni-7YI"/>
-                        <outlet property="outputLabel" destination="4jH-uB-op3" id="qum-cp-bMk"/>
+                        <outlet property="outputLabel" destination="4jH-uB-op3" id="zXB-Je-QPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
