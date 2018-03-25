@@ -14,6 +14,7 @@
 		5F0FC0E22062F78500655FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FC0E02062F78500655FFE /* LaunchScreen.storyboard */; };
 		5F0FC0ED2062F78500655FFE /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FC0EC2062F78500655FFE /* CalculatorTests.swift */; };
 		5F0FC0F82062F78500655FFE /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FC0F72062F78500655FFE /* CalculatorUITests.swift */; };
+		5FCE3AE5206807750017D3E5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE3AE4206807750017D3E5 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5F0FC0F32062F78500655FFE /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0FC0F72062F78500655FFE /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		5F0FC0F92062F78500655FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FCE3AE4206807750017D3E5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				5F0FC0DE2062F78500655FFE /* Assets.xcassets */,
 				5F0FC0E02062F78500655FFE /* LaunchScreen.storyboard */,
 				5F0FC0E32062F78500655FFE /* Info.plist */,
+				5FCE3AE4206807750017D3E5 /* RoundButton.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCE3AE5206807750017D3E5 /* RoundButton.swift in Sources */,
 				5F0FC0DA2062F78500655FFE /* ViewController.swift in Sources */,
 				5F0FC0D82062F78500655FFE /* AppDelegate.swift in Sources */,
 			);
