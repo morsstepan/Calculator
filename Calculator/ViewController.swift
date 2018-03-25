@@ -42,37 +42,82 @@ class ViewController: UIViewController {
 
 
     @IBAction func numberPressed(_ sender: RoundButton) {
-        runningNumber += "\(sender.tag)"
-        outputLabel.text = runningNumber
+        if runningNumber.count <= 8 {
+            runningNumber += "\(sender.tag)"
+            outputLabel.text = runningNumber
+        }
+        
     }
     
     @IBAction func allClearPressed(_ sender: RoundButton) {
+        runningNumber = ""
+        leftValue = ""
+        rightValue = ""
+        result = ""
+        currentOperation = .NULL
+        outputLabel.text = "0"
     }
     
     @IBAction func dotPressed(_ sender: RoundButton) {
-        runningNumber += ","
-        outputLabel.text = runningNumber
+        if runningNumber.count <= 7 {
+            runningNumber += ","
+            outputLabel.text = runningNumber
+        }
     }
     
     @IBAction func equalPressed(_ sender: RoundButton) {
+        operation(operation: currentOperation)
     }
     
     @IBAction func addPressed(_ sender: RoundButton) {
+        operation(operation: .Add)
     }
     
     @IBAction func subtractPressed(_ sender: RoundButton) {
+        operation(operation: .Subtract)
     }
     
     @IBAction func multiplyPressed(_ sender: RoundButton) {
+        operation(operation: .Multiply)
     }
     
     @IBAction func dividePressed(_ sender: RoundButton) {
+        operation(operation: .Divide)
     }
     
     @IBAction func percentagePressed(_ sender: RoundButton) {
     }
     
     @IBAction func plusNegativePressed(_ sender: RoundButton) {
+    }
+    
+    func operation(operation: Operation) {
+        if currentOperation != .NULL {
+            if runningNumber != "" {
+                rightValue = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == .Add  {
+                    result = "\(Double(leftValue)! + Double(rightValue)!)"
+                } else if currentOperation == .Subtract {
+                    result = "\(Double(leftValue)! - Double(rightValue)!)"
+                } else if currentOperation == .Divide {
+                    result = "\(Double(leftValue)! / Double(rightValue)!)"
+                } else if currentOperation == .Multiply {
+                    result = "\(Double(leftValue)! * Double(rightValue)!)"
+                }
+                leftValue = result
+                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0) {
+                    result = "\(Int(Double(result)!))"
+                }
+                outputLabel.text = result
+            }
+            currentOperation = operation
+        } else {
+            leftValue = runningNumber
+            runningNumber = ""
+            currentOperation = operation
+        }
     }
 }
 
